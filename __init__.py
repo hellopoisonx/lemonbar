@@ -2,7 +2,7 @@
 import os
 import action
 # widgets = ["show_all_workspace", "clock_hour", "clock_year", "cpu", "net", "volume", "mem"]
-lemonbar = "lemonbar -d -p  -f 'Font Awesome 6 Free' "
+lemonbar = "lemonbar -p  -f 'Font Awesome 6 Free' "
 os.popen("killall lemonbar")
 x = 20
 for i, widget in enumerate(action.Left):
