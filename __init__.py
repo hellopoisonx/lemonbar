@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 import os
-workspace_total = "1 2 3 4 5"
-widgets = ["show_all_workspace", "clock_hour", "clock_year", "cpu", "net", "volume", "mem"]
-lemonbar = "lemonbar -d -p -o 1 -f 'JetBrainsMonoNLNerdFont'-12 -f 'Font Awesome 6 Free' -B '#1a1a1a' -F '#4d94ff' -g "
-x = 20
+import action
+# widgets = ["show_all_workspace", "clock_hour", "clock_year", "cpu", "net", "volume", "mem"]
+lemonbar = "lemonbar -d -p  -f 'Font Awesome 6 Free' "
 os.popen("killall lemonbar")
-for i in range(0, widgets.__len__()):
-    x = 20
-    position = "160" + "x" + "27" + "+" + str(x * i) + "1"
-    if widgets[i] == "show_all_workspace":
-        x = 9
-        os.popen("echo " + workspace_total + " | " + lemonbar + position + " &")
-        continue
-    if widgets[i] == "workspace":
-        position = "30" + "x" + "27" + "+" + str(x * i) + "0"
-    if widgets[i] == "cpu" or widgets[i] == "volume":
-        position = "80" + "x" + "27" + "+" + str(x * i) + "0"
-        x = 9
-    os.popen("~/lemonbar/" + widgets[i] + ".py" + " | " + lemonbar + position + " &")
+x = 20
+for i, widget in enumerate(action.Left):
+    position = str(widget.width) + "x" + "27" + "+" + str(x) + "+" + "1" 
+    cmd = widget.cmd + ' | ' + lemonbar + "-f " + widget.font + " -F " + '"' + widget.forecolor + '"' + " -B " + '"' + widget.backcolor + '"' + " -g " + position + " &"
+    x = x + widget.width + widget.gap
+    print(str(x) + " " + cmd)
+    os.popen(cmd)
+x = 1700
+for i, widget in enumerate(action.Right):
+    position = str(widget.width) + "x" + "27" + "+" + str(x) + "+" + "1" 
+    cmd = widget.cmd + ' | ' + lemonbar + "-f " + widget.font + " -F " + '"' + widget.forecolor + '"' + " -B " + '"' + widget.backcolor + '"' + " -g " + position + " &"
+    x = x + widget.width + widget.gap
+    print(str(x) + " " + cmd)
+    os.popen(cmd)

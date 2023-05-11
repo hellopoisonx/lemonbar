@@ -6,4 +6,4 @@ import widgets
 while True:
     sys.stdout.write(widgets.clock_year())
     sys.stdout.flush()
-    time.sleep(1)
+    time.sleep(300)
