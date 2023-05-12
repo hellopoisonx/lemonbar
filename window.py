@@ -2,8 +2,7 @@
 import sys
 import widgets
 import time
-# import time
 while True:
-    sys.stdout.write(widgets.get_current_workspace())
-    time.sleep(0.2)
+    sys.stdout.write(widgets.get_widow_name())
     sys.stdout.flush()
+    time.sleep(0.5)
