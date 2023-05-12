@@ -15,7 +15,7 @@ def get_current_workspace():
     return "%{c}" + result.rstrip('\n') + "%{c}"
 def get_widow_name():
     window_name = os.popen("xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) WM_CLASS").read()
-    window_name = window_name[window_name.find("\"") + 1: window_name.find(",") - 1]
+    window_name = window_name[window_name.find("\"",window_name.find("\"") + 1) + 4: -2]
     return "%{c}" + window_name + "%{c}"
 def get_net_rate():
     """ """
@@ -32,7 +32,7 @@ def get_volume():
     volume = int(volume_get[first+1:end-1])
     if volume <= 34:
        return " \uf027" + str(volume) + "%"
-    return " %{c}\uf028" + str(volume) + "%%{c}" 
+    return " %{c}\uf028" + str(volume) + "%%%{c}" 
 
 def clock():
     year_month_day = time.strftime("%Y-%m-%d", time.localtime())
