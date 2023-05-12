@@ -18,7 +18,7 @@ cpu = action(90, "~/lemonbar/cpu.py", 15)
 mem = action(185, "~/lemonbar/mem.py", 15)
 net = action(145, "~/lemonbar/net.py", 15)
 volume = action(75, "~/lemonbar/volume.py", 15)
-window = action(160, "~/lemonbar/window.py", 15)
+window = action(180, "~/lemonbar/window.py", 15)
 #layout
 Left = [workspace]
 Middle = [window]
