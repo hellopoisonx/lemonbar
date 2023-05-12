@@ -8,8 +8,13 @@ import time
 def get_all_workspace():
     return " 1 2 3 4 5 6 7 8 9"
 def get_current_workspace():
-    current_workspace = int(os.popen("xdotool get_desktop").read()) + 1
-    return " " + str(current_workspace).rstrip('\n')
+    workspace = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    current_workspace = int(os.popen("xdotool get_desktop").read())
+    workspace[current_workspace] = "%{F#cc99ff}%{+u}" + str(current_workspace + 1) + "%{-u}%{F}"
+    result = " "
+    for i in workspace:
+        result += i + " "
+    return result.rstrip('\n')
 def get_net_rate():
     """ """
     down_before = float(os.popen("cat /proc/net/dev | grep wlp3s0 | awk   '{printf $2}'").read())
@@ -19,24 +24,26 @@ def get_net_rate():
     return " " + "\uf0ed" + str(":{0}MB/s".format("%.2f"%down))
 def get_volume():
     """ """
-    volume = str(os.popen("amixer get Master | tail -n1 ").read())
-    first = volume.find('[')
-    end = volume.find(']')
-    return " " + volume[first:end+1]
+    volume_get = str(os.popen("amixer get Master | tail -n1 ").read())
+    first = volume_get.find('[')
+    end = volume_get.find(']')
+    volume = int(volume_get[first+1:end-1])
+    if volume <= 34:
+       return " \uf027" + str(volume) + "%"
+    return " \uf028" + str(volume) + "%" 
 
-def clock_year():
-    """ """
-    return time.strftime(" %Y-%m-%d", time.localtime())
-def clock_hour():
-    return time.strftime(" %H:%M", time.localtime()) 
+def clock():
+    year_month_day = time.strftime("%Y-%m-%d", time.localtime())
+    hour_minute = time.strftime("%H:%M", time.localtime()) 
+    return " \uf073" + year_month_day + " " + hour_minute
 def get_memory():
     """ """
     mem_free = round(int(os.popen("grep  'MemAvailable:' /proc/meminfo | awk '{print $2}'").read()) / 1024 /1024, 1)
     mem_total = round(int(os.popen("grep  'MemTotal:' /proc/meminfo | awk '{print $2}'").read()) /1024 / 1024, 1)
     mem_used = round(mem_total - mem_free, 1)
-    return " " + str(mem_used) + 'GB/' + str(mem_total) + 'GB'
+    return " \uf4bc" + str(mem_used) + 'GB/' + str(mem_total) + 'GB'
 
 def get_cpu():
     """ """
     cpu_usage = str(os.popen("top -bn1 | grep 'Cpu(s)' | awk '{print $2}'").read()).rstrip('\n')
-    return " " + cpu_usage + "%"
+    return " \uf2db" + cpu_usage + "%"

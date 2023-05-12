@@ -1,0 +1,3 @@
+[submodule "ComicMonoNF"]
+	path = ComicMonoNF
+	url = git@github.com:xtevenx/ComicMonoNF.git
