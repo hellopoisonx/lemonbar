@@ -6,5 +6,5 @@ import widgets
 while True:
     sys.stdout.write(widgets.clock())
     sys.stdout.flush()
-    time.sleep(59)
+    time.sleep(10)
 
