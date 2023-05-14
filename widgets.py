@@ -32,12 +32,12 @@ def get_volume():
     volume = int(volume_get[first+1:end-1])
     if volume <= 34:
        return " \uf027" + str(volume) + "%"
-    return " %{c}\uf028" + str(volume) + "%%%{c}" 
+    return "\uf028" + str(volume) 
 
 def clock():
     year_month_day = time.strftime("%Y-%m-%d", time.localtime())
     hour_minute = time.strftime("%H:%M", time.localtime()) 
-    return " %{c}\uf073" + year_month_day + " " + hour_minute + "%{c}"
+    return " \uf073" + year_month_day + " " + hour_minute + " "
 def get_memory():
     """ """
     mem_free = round(int(os.popen("grep  'MemAvailable:' /proc/meminfo | awk '{print $2}'").read()) / 1024 /1024, 1)
@@ -49,3 +49,8 @@ def get_cpu():
     """ """
     cpu_usage = str(os.popen("top -bn1 | grep 'Cpu(s)' | awk '{print $2}'").read()).rstrip('\n')
     return " %{c}\uf2db" + cpu_usage + "%%%{c}"
+
+def get_light():
+    """ """
+    light = str(int(float(os.popen("light").read().rstrip('\n'))))
+    return " \uf0eb" + light 
