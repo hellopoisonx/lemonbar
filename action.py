@@ -10,8 +10,8 @@ class action(object):
         self.font = font
         self.forecolor = forecolor
         self.backcolor = backcolor
-        self.click_event = click_event
-        self.click_cmd = click_cmd
+        self.click_event = click_event #1,2,3,4,5:left,middle,right,scroll up, scroll down
+        self.click_cmd = click_cmd #foo,foo
 
 start = action(0, "echo '.'", 1)
 workspace = action(220, "~/lemonbar/workspace.py", 15)
