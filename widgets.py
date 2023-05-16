@@ -20,10 +20,13 @@ def get_widow_name():
 def get_net_rate():
     """ """
     down_before = float(os.popen("cat /proc/net/dev | grep wlp3s0 | awk   '{printf $2}'").read())
+    up_before = float(os.popen("cat /proc/net/dev | rg wlp3s0 | awk '{print $10}'").read())
     time.sleep(1)
     down_after = float(os.popen("cat /proc/net/dev | grep wlp3s0 | awk   '{printf $2}'").read())
+    up_after = float(os.popen("cat /proc/net/dev | rg wlp3s0 | awk '{print $10}'").read())
     down = (down_after - down_before) / 1024 / 1024
-    return "%{c}" + "\uf0ed" + str(":{0}MB/s".format("%.2f"%down)) + "%{c}"
+    up = (up_after - up_before) / 1024 / 1024
+    return "%{c}" + "\uf0ed" + str(":{0}MB/s ".format("%.2f"%down)) + "\uf0ee" + str(":{0}MB/s".format("%.2f"%up)) + "%{c}"
 def get_volume():
     """ """
     volume_get = str(os.popen("amixer get Master | tail -n1 ").read())
