@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 import os
 import time
-# position = ["350+333+2", "80+720+2", "182x26+820+2", "155x26+1120+2", "120x26+1350+2"]
-# lemonbar = "lemonbar -d -p -f 'JetBrainsMonoNLNerdFont' -f 'Font Awesome 6 Free' -B '#1a1a1a' -F '#4d94ff' -g "
-# interval = "2s"
-# x = 20
 def get_current_workspace():
     workspace = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     current_workspace = int(os.popen("xdotool get_desktop").read())
@@ -14,9 +10,10 @@ def get_current_workspace():
         result += i + " "
     return "%{c}" + result.rstrip('\n') + "%{c}"
 def get_widow_name():
-    window_name = os.popen("xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) WM_CLASS").read()
-    window_name = window_name[window_name.find("\"",window_name.find("\"") + 1) + 4: -2]
-    return "%{c}" + window_name + "%{c}"
+    window_name = os.popen("xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) WM_NAME").read()
+    # window_name = os.popen("xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) WM_CLASS").read()
+    window_name = window_name[window_name.find("\"") + 1:-2]
+    return "%{c}"+ window_name + "%{c}"
 def get_net_rate():
     """ """
     down_before = float(os.popen("cat /proc/net/dev | grep wlp3s0 | awk   '{printf $2}'").read())

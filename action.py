@@ -10,8 +10,8 @@ class action(object):
         self.font = font
         self.forecolor = forecolor
         self.backcolor = backcolor
-        self.click_event = click_event #1,2,3,4,5:left,middle,right,scroll up, scroll down
-        self.click_cmd = click_cmd #foo,foo
+        self.click_event = click_event # 1,2,3,4,5:left,middle,right,scroll up, scroll down
+        self.click_cmd = click_cmd # foo,foo
 
 start = action(0, "echo '.'", 1)
 workspace = action(220, "~/lemonbar/workspace.py", 15)
@@ -20,7 +20,7 @@ cpu = action(90, "~/lemonbar/cpu.py", 15)
 mem = action(185, "~/lemonbar/mem.py", 15)
 net = action(280, "~/lemonbar/net.py", 20)
 volume = action(75, "~/lemonbar/volume.py", 15, click_event=(4,5), click_cmd=("amixer sset Master 5%+", "amixer sset Master 5%-"))
-window = action(180, "~/lemonbar/window.py", 15)
+window = action(350, "~/lemonbar/window.py", 15)
 light = action(65, "~/lemonbar/light.py", 5, click_event=(4,5), click_cmd=("light -A 5", "light -U 5"))
 #layout
 Left = [workspace]

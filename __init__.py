@@ -11,8 +11,8 @@ def drawbar(x, layout):
         print(str(x) + " " + cmd)
         os.popen(cmd)
 #draw right bar
-drawbar(1500, action.Right)
+drawbar(1550, action.Right)
 #draw middle bar
-drawbar(1000, action.Middle)
+drawbar(800, action.Middle)
 #draw left bar
 drawbar(10, action.Left)
