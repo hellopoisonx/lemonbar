@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import sys
 import widgets
+import sys
 
-sys.stdout.write(widgets.get_light())
+sys.stdout.write(widgets.get_music_status())
 sys.stdout.flush()
