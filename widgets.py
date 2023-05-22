@@ -19,16 +19,16 @@ def get_widow_name():
         "xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) WM_NAME").read()
     # window_name = os.popen("xprop -id $(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5) WM_CLASS").read()
     window_name = window_name[window_name.find("\"") + 1:-2]
-    if len(window_name) > 20:
-        window_name = window_name[:21]
+    if len(window_name) > 25:
+        window_name = window_name[:26]
     return "%{c}" + window_name + "%{c}"
 
 
 def get_music_status():
     music = os.popen(
         'playerctl metadata --format "playing: {{ artist }} - {{ album }} - {{ title }}"').read().rstrip("\n")
-    if len(music) > 20:
-        music = music[:21]
+    if len(music) > 25:
+        music = music[:26]
     return "%{c}" + music + "%{c}"
 
 
