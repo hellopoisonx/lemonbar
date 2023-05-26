@@ -3,7 +3,7 @@ import os
 import action
 import log
 
-lemonbar = "lemonbar -p -o 1 -u 3 "
+lemonbar = "lemonbar -d -p -o 1 -u 3 "
 
 
 def handle_mouse_event(obj: action.action):

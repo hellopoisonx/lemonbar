@@ -1,17 +1,22 @@
 #!/usr/bin/env python
 import os
 import time
+# import action
 
 
 def get_current_workspace():
-    workspace = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    current_workspace = int(os.popen("xdotool get_desktop").read())
-    workspace[current_workspace] = "%{F#cc99ff}%{+u}" + \
-        str(current_workspace + 1) + "%{-u}%{F}"
-    result = " "
-    for i in workspace:
-        result += i + " "
-    return "%{c}" + result.rstrip('\n') + "%{c}"
+    worspace_num = int(os.popen("xdotool get_num_desktops").read())
+    # action.workspace.width = worspace_num * 19
+    # workspace = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    workspace = " "
+    for i in range(1, worspace_num + 1):
+        current_workspace = int(os.popen("xdotool get_desktop").read())
+        if i == current_workspace + 1:
+            workspace += "%{F#cc99ff}%{+u}" + \
+                str(current_workspace + 1) + "%{-u}%{F} "
+            continue
+        workspace += str(i) + " "
+    return "%{c}" + workspace + "%{c}"
 
 
 def get_widow_name():
