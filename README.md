@@ -1,0 +1,4 @@
+# lemonbar
+lemonbar
+## TODO:
+  - systray
