@@ -1,4 +1,0 @@
-# lemonbar
-lemonbar
-## TODO:
-  - systray
