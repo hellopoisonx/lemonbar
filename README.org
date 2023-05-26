@@ -1,0 +1,12 @@
+* HPXX's lemonbar config file
+* dependencies
+  1. xdotool
+     2. playerctl
+        3. light
+           4. amixer
+              5. calcurse
+                 6. nerd font
+
+* TODO 
+  - system tray
+  - dynamic widget width

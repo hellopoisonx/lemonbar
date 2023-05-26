@@ -24,7 +24,7 @@ class action(object):
 start = action(0, "echo '.'", 1)
 workspace = action(int((os.popen("xdotool get_num_desktops").read())) * 22, "~/lemonbar/workspace.py", 15, interval=0.2)
 clock = action(220, "~/lemonbar/clock.py", 15, click_event=(1, 3),
-               click_cmd=("calcurse | alacritty", "calcurse | alacritty"), interval=40)
+               click_cmd=("alacritty -e calcurse", "alacritty -e calcurse"), interval=40)
 cpu = action(90, "~/lemonbar/cpu.py", 15)
 mem = action(185, "~/lemonbar/mem.py", 15, interval=2)
 net = action(280, "~/lemonbar/net.py", 20, interval=1)

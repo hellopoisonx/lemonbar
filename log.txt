@@ -1259,3 +1259,135 @@ done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x
  do
  echo "$(~/lemonbar/workspace.py)";sleep 0.2s;
 done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 110x27+10+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(echo '.')";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 0x27+1550+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "%{A1:calcurse | alacritty -e:}%{A3:calcurse | alacritty -e:}$(~/lemonbar/clock.py)%{A3}%{A1}";sleep 40s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 220x27+1551+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(~/lemonbar/cpu.py)";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 90x27+1786+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(~/lemonbar/mem.py)";sleep 2s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 185x27+1891+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(~/lemonbar/net.py)";sleep 1s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 280x27+2091+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "%{A4:light -A 5:}%{A5:light -U 5:}$(~/lemonbar/light.py)%{A5}%{A4}";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 65x27+2391+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "%{A4:amixer sset Master 5%+:}%{A5:amixer sset Master 5%-:}$(~/lemonbar/volume.py)%{A5}%{A4}";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 75x27+2461+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(echo '.')";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 0x27+2551+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(~/lemonbar/window.py)";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x27+450+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(~/lemonbar/music.py)";sleep 2s;
+done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x27+765+1 | zsh &
+[2023-05-26 22-41-26]:(while true
+ do
+ echo "$(~/lemonbar/workspace.py)";sleep 0.2s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 110x27+10+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(echo '.')";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 0x27+1550+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "%{A1:alacritty -e calcurse:}%{A3:alacritty -e calcurse:}$(~/lemonbar/clock.py)%{A3}%{A1}";sleep 40s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 220x27+1551+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(~/lemonbar/cpu.py)";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 90x27+1786+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(~/lemonbar/mem.py)";sleep 2s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 185x27+1891+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(~/lemonbar/net.py)";sleep 1s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 280x27+2091+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "%{A4:light -A 5:}%{A5:light -U 5:}$(~/lemonbar/light.py)%{A5}%{A4}";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 65x27+2391+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "%{A4:amixer sset Master 5%+:}%{A5:amixer sset Master 5%-:}$(~/lemonbar/volume.py)%{A5}%{A4}";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 75x27+2461+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(echo '.')";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 0x27+2551+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(~/lemonbar/window.py)";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x27+450+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(~/lemonbar/music.py)";sleep 2s;
+done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x27+765+1 | zsh &
+[2023-05-26 22-42-29]:(while true
+ do
+ echo "$(~/lemonbar/workspace.py)";sleep 0.2s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 110x27+10+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(echo '.')";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 0x27+1550+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "%{A1:alacritty -e calcurse:}%{A3:alacritty -e calcurse:}$(~/lemonbar/clock.py)%{A3}%{A1}";sleep 40s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 220x27+1551+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(~/lemonbar/cpu.py)";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 90x27+1786+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(~/lemonbar/mem.py)";sleep 2s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 185x27+1891+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(~/lemonbar/net.py)";sleep 1s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 280x27+2091+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "%{A4:light -A 5:}%{A5:light -U 5:}$(~/lemonbar/light.py)%{A5}%{A4}";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 65x27+2391+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "%{A4:amixer sset Master 5%+:}%{A5:amixer sset Master 5%-:}$(~/lemonbar/volume.py)%{A5}%{A4}";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 75x27+2461+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(echo '.')";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 0x27+2551+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(~/lemonbar/window.py)";sleep 0.5s;
+done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x27+450+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(~/lemonbar/music.py)";sleep 2s;
+done) | lemonbar -d -p -o 1 -u 3 -f wqy-zenhei -F "#99ccff" -B "#000033" -g 300x27+765+1 | zsh &
+[2023-05-26 22-42-49]:(while true
+ do
+ echo "$(~/lemonbar/workspace.py)";sleep 0.2s;
+done) | lemonbar -d -p -o 1 -u 3 -f ComicMonoNF-Bold -F "#99ccff" -B "#000033" -g 110x27+10+1 | zsh &
