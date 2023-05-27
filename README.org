@@ -7,6 +7,6 @@
     5. calcurse
     6. nerd font
 
-* TODO 
+* /TODO 
   - system tray
   - dynamic widget width
