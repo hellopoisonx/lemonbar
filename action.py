@@ -21,8 +21,13 @@ class action(object):
         self.interval = interval
 
 
+workspace_nums = int(os.popen("xdotool get_num_desktops").read())
+Workspace_x = []
+for i in range(0, workspace_nums):
+    Workspace_x.append(22 * (i + 1))
 start = action(0, "echo '.'", 1)
-workspace = action(int((os.popen("xdotool get_num_desktops").read())) * 22, "~/lemonbar/workspace.py", 15, interval=0.2)
+workspace = action(workspace_nums * 22,
+                   "~/lemonbar/workspace.py", 15, interval=0.2)
 clock = action(220, "~/lemonbar/clock.py", 15, click_event=(1, 3),
                click_cmd=("alacritty -e calcurse", "alacritty -e calcurse"), interval=40)
 cpu = action(90, "~/lemonbar/cpu.py", 15)
