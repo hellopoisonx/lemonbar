@@ -6,7 +6,7 @@
     4. amixer
     5. calcurse
     6. nerd font
-
+    7. alacritty recommended or any other terminal simulation(remember to change terminal name(default: alacritty) in the action.py)
 * *TODO*
   - system tray
   - dynamic widget width
