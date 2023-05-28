@@ -4,8 +4,8 @@
     2. playerctl
     3. light
     4. amixer
-    5. calcurse
-    6. nerd font
+    5. calcurse(or you can directly delete *events* in action.py)
+    6. nerd font(default: ComicMonoNF-Bold; If you want to change the font family remember to change the font size after *worspace_nums* in action.py)
     7. alacritty recommended or any other terminal simulation(remember to change terminal name(default: alacritty) in the action.py)
 * *TODO*
   - system tray
